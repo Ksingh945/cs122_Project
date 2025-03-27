@@ -1,14 +1,13 @@
-# CS 122 Project
+# CS 122 Final Project
 
-## Project Title: Type Here
+## Project Title: Python-Based Stock Data Explorer
 
-## Authors: Type Here
+## Authors: Nishit Oberoi & Kuldeep Singh
 
 ## Project Description
 Type Here
 
 ## Project Outline
-Type Here
 
 ### Interface Plan
 Type Here

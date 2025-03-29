@@ -8,6 +8,19 @@
 Type Here
 
 ## Project Outline
+1. Design a user-friendly Flask web interface with at least two screens (Home & Visualization).
+
+2. Create functionality for users to input stock ticker and date range.
+
+3. Fetch real-time or historical stock data using an open API (e.g., Yahoo Finance via yfinance).
+
+4. Organize data into structured CSV files locally for reuse and reproducibility.
+
+5. Perform basic analysis (e.g., price changes, moving averages).
+
+6. Generate visualizations such as line plots for stock trends.
+
+7. Ensure good version control with Git and collaboration via GitHub.
 
 ### Interface Plan
 Type Here

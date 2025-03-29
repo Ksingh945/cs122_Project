@@ -5,7 +5,7 @@
 ## Authors: Nishit Oberoi & Kuldeep Singh
 
 ## Project Description
-Type Here
+The Python-Based Stock Data Explorer is a web-based application that allows users to retrieve and explore historical stock market data. Users can input a stock ticker, select a date range, and visualize trends in stock prices over time. The interface is built using Flask and includes interactive widgets like dropdowns and buttons. The app fetches data from a freely available stock data API, organizes it locally, and performs meaningful statistical analysis. It is designed for beginner investors, students, and anyone curious about financial trends.
 
 ## Project Outline
 1. Design a user-friendly Flask web interface with at least two screens (Home & Visualization).

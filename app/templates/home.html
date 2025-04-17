@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Stock Explorer</title></head>
+<body>
+    <h2>Enter Stock Ticker & Date Range</h2>
+    <form action="/visualize" method="POST">
+        <input type="text" name="ticker" placeholder="e.g. AAPL" required><br>
+        <input type="date" name="start" required><br>
+        <input type="date" name="end" required><br>
+        <input type="submit" value="Get Data">
+    </form>
+</body>
+</html>

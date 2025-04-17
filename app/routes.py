@@ -30,3 +30,7 @@ def visualize():
     data.to_csv(filepath)
 
     return render_template('visualize.html', tables=[data.tail().to_html(classes='data')], ticker=ticker)
+
+
+
+#Test commit from nishit-14

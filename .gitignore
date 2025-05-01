@@ -11,6 +11,8 @@ __pycache__/
 
 # Ignore Data Files
 data/*
+app/static/*.png
+
 
 # Distribution / packaging
 .Python

@@ -1,0 +1,20 @@
+table.data {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  table.data thead th {
+    text-align: left;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  table.data tbody td {
+    padding: 8px 12px;
+    border-top: 1px solid #dee2e6;
+    vertical-align: middle;
+  }
+  

@@ -45,7 +45,7 @@ The app is designed for beginner investors, students, and anyone curious about f
 
 ---
 
-## 🖥Interface Plan
+## Interface Plan
 
 The frontend is built using Jinja2 templating and Bootstrap 5. Users land on a clean homepage where they can submit a stock ticker, date range, and select a moving average window. When submitted, the app fetches and analyzes data and renders it in a structured and visually engaging format.
 

@@ -1,32 +1,84 @@
-# CS 122 Final Project
+CS 122 Final Project
+📈 Project Title: Python-Based Stock Data Explorer
+Authors: Nishit Oberoi & Kuldeep Singh
 
-## Project Title: Python-Based Stock Data Explorer
+🧠 Project Description
+The Python-Based Stock Data Explorer is a web-based Flask application that allows users to retrieve, analyze, and visualize historical stock market data. Users can input a stock ticker, select a date range, and view insights like price trends, moving averages, volume, and volatility indicators.
 
-## Authors: Nishit Oberoi & Kuldeep Singh
+The app is designed for beginner investors, students, and anyone curious about financial markets. It emphasizes simplicity, visual clarity, and lightweight performance — with all computations and visualizations handled on the backend using Python libraries like Pandas and Matplotlib.
 
-## Project Description
-The Python-Based Stock Data Explorer is a web-based application that allows users to retrieve and explore historical stock market data. Users can input a stock ticker, select a date range, and visualize trends in stock prices over time. The interface is built using Flask and includes interactive widgets like dropdowns and buttons. The app fetches data from a freely available stock data API, organizes it locally, and performs meaningful statistical analysis. It is designed for beginner investors, students, and anyone curious about financial trends.
+🗂️ Project Outline
+Build a user-friendly Flask web interface with two main pages:
 
-## Project Outline
-1. Design a user-friendly Flask web interface with at least two screens (Home & Visualization).
+Home (input form + recent searches)
 
-2. Create functionality for users to input stock ticker and date range.
+Visualization (charts + data summary)
 
-3. Fetch real-time or historical stock data using an open API (e.g., Yahoo Finance via yfinance).
+Create functionality for users to input:
 
-4. Organize data into structured CSV files locally for reuse and reproducibility.
+Stock ticker
 
-5. Perform basic analysis (e.g., price changes, moving averages).
+Date range
 
-6. Generate visualizations such as line plots for stock trends.
+Moving average (3, 5, 10, 20, or 50-day)
 
-7. Ensure good version control with Git and collaboration via GitHub.
+Fetch historical stock data from the Alpha Vantage API
 
-### Interface Plan
-The interface for this project will be developed in Python using the Flask framework. It will include a home page where users can enter a stock ticker and select a date range. After submission, the app will fetch and process the data, displaying results on a separate page with a summary table and key metrics like daily returns and moving averages. A visualization page will show charts generated with Python, such as time series plots and trend overlays. Flask routing and Jinja2 templating will be used to dynamically render content and embed charts into the web pages.
+Cache data locally in compressed .csv.gz files in a data/ folder
 
-### Data Collection and Storage Plan (written by Nishit Oberoi)
-We will use the yfinance Python library to collect stock market data from Yahoo Finance. When a user submits a stock ticker and date range, the application fetches the relevant data and stores it as a CSV file in a local data/ directory. This allows us to reuse data without repeatedly querying the API and keeps a local record for analysis. The data is organized with headers such as Date, Open, High, Low, Close, and Volume.
+Perform backend analysis including:
 
-### Data Analysis and Visualization Plan (written by Kuldeep Singh)
-The analysis and visualization component of this project focuses on identifying trends and insights within the collected stock data. Key metrics such as daily returns, moving averages, and volatility will be calculated using pandas and numpy. The data will be visualized using matplotlib, providing users with clear, interactive charts including line graphs for closing prices, moving average overlays, and histograms of daily returns.
+Daily returns
+
+Moving averages
+
+Bollinger Bands
+
+Generate dynamic charts using Matplotlib:
+
+Price chart with MA
+
+Daily return histogram
+
+Volume bar chart
+
+Bollinger Bands visualization
+
+Track recent user queries using Flask’s session object (no database required)
+
+Ensure version control and team collaboration using GitHub
+
+🖥️ Interface Plan
+The frontend is built using Jinja2 templating and Bootstrap 5. Users land on a clean homepage where they can submit a stock ticker, date range, and select a moving average window. When submitted, the app fetches and analyzes data and renders it in a structured and visually engaging format.
+
+The visualization page presents four different charts, along with a recent stock data table. A session-based history system on the home page allows users to easily revisit past searches during their session.
+
+📊 Data Collection and Storage Plan
+(written by Nishit Oberoi)
+
+We use the Alpha Vantage API (instead of yfinance) to fetch historical stock data based on user input. The API returns JSON, which is processed into a Pandas DataFrame with standard headers like Date, Open, High, Low, Close, and Volume.
+
+To optimize performance and reduce redundant API calls, we cache each query as a compressed CSV file (.csv.gz) in a local data/ directory. The filenames are named dynamically using the ticker and date range, and are reused unless stale (older than one day).
+
+📈 Data Analysis and Visualization Plan
+(written by Kuldeep Singh)
+
+After data collection, the app performs several backend computations:
+
+Daily Return: Percentage change in close price
+
+Moving Average: Rolling average over user-selected window
+
+Bollinger Bands: Price envelope based on moving average ± 2 standard deviations
+
+Visualizations are generated using Matplotlib, including:
+
+A price line chart with moving average overlay
+
+A histogram showing the distribution of daily returns
+
+A volume bar chart (with green/red bars indicating price direction)
+
+A Bollinger Bands chart to visualize volatility
+
+All charts are dynamically saved to the static/ directory and displayed in the interface.
